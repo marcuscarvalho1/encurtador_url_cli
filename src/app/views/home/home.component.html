@@ -1,0 +1,31 @@
+<mat-toolbar color="primary" class="top-container" [class.mat-elevation-z20]="true" style="height: 80px">    
+    <span style="font-size: 25px; font-family: Roboto,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif">
+        <mat-icon style="font-size: 25px; vertical-align: top; margin: 4px">shield</mat-icon>
+        Angular 11
+    </span>
+</mat-toolbar>
+<mat-toolbar color="primary" class="top-container" [class.mat-elevation-z20]="true" style="height: 50px">
+    <span style="font-family: Roboto,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif; font-size: 16px">
+        <mat-icon style="vertical-align: top; padding: 4px">input</mat-icon>
+        Encurtador de URL'S
+    </span>
+</mat-toolbar>
+<fieldset style="margin: 15px; padding: 15px; width: 600px; border-radius: 4px;">
+    <span style="font-size: 18px;">Bem vindo à pagina do Desafio de Encurtador de URL's! <br><br></span>
+    <span>Autor: Marcus Vinicius Almeida de Carvalho <br></span>
+    <span>Contato: marcuscarvalho1@yahoo.com.br<br><br></span>
+    <span style="font-size: 18px;">Como funciona?<br><br></span>
+    <span>Digite no campo abaixo uma URL qualquer (Ex.: www.github.com). Você receberá uma URL encurtada. 
+        Se copiar e colar esta URL encurtada no browser, você será redirecionado para a página que tinha digitado ao gera-la.<br>
+        Mas atenção! A URL encurtada só ficará válida durante 60 segundos!
+    </span>    
+</fieldset>
+<fieldset style="margin: 15px; padding: 15px; width: 600px; border-radius: 4px;">
+    <span style="font-size: 18px;">Digite aqui uma URL: <br><br></span>
+    <span>
+        <mat-form-field style="width: 100%">
+            <mat-label>URL</mat-label>
+            <input matInput placeholder="Ex.: www.github.com" value="">
+        </mat-form-field>
+    </span>
+</fieldset>
