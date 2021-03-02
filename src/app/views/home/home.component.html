@@ -38,6 +38,9 @@
             <div style="position: absolute; left: 350px; top: 57px">
                 <button mat-raised-button color="primary" (click)="onClickButton(novaUrl.value)" >Gerar URL encurtada!</button>
             </div>
+            <div *ngIf="exibirSpinner" style="position: absolute; left: 530px; top: 62px">
+                <mat-spinner diameter="25" strokeWidth="5" value="100" mode="indeterminate"></mat-spinner>
+            </div>
         </span>
     </fieldset>
 </div>

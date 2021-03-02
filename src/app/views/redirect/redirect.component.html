@@ -1,7 +1,7 @@
 <div class="nf-container l-flex-wrap flex-center">
-    <img src="assets/images/angular-404.svg" width="300" height="300">
-    <div class="nf-response 2-flex-wrap">
-        <h1 class="no-anchor no-toc" id="page-not-found">{{mensagemGrande}}</h1>
-        <p>{{mensagemPequena}}</p>
-    </div>
+    <img *ngIf="exibirImg" src="assets/images/angular-404.svg" width="300" height="300">
+    <mat-spinner *ngIf="exibirSpinner" diameter="205" strokeWidth="20" value="100" mode="indeterminate"></mat-spinner>
+<div class="nf-response 2-flex-wrap">
+    <h1 class="no-anchor no-toc" id="page-not-found">{{mensagemGrande}}</h1>
+    <p>{{mensagemPequena}}</p>
 </div>

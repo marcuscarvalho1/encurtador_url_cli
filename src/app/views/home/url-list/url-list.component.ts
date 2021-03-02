@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Url } from 'src/app/shared/model/url.module';
 import { EncurtadorService } from 'src/app/shared/service/encurtador.service';
 import { Context } from 'src/app/shared/util/context';
+import { HomeComponent } from '../home.component';
 
 @Component({
     selector: 'app-url-list',
@@ -17,13 +18,14 @@ export class UrlListComponent implements OnInit {
     urlsNaoExpiradas: Url[] = [];    
 
     constructor(
-        public encurtadorService1: EncurtadorService
+        public encurtadorService1: EncurtadorService,
+        public homeComponent1: HomeComponent
     ) { }
 
     ngOnInit(): void {
         setInterval(() => {
-            this.getUrlsNaoExpiradas()
-        }, 5000);        
+            this.getUrlsNaoExpiradas()            
+        }, 4000);
     }
     
     getContextPath() {
@@ -32,7 +34,8 @@ export class UrlListComponent implements OnInit {
     
     getUrlsNaoExpiradas(){
         this.encurtadorService1.getUrlsNaoExpiradas().subscribe(data => {
-            this.urlsNaoExpiradas = data;           
+            this.urlsNaoExpiradas = data;
+            this.homeComponent1.ocultarSpinner()
         })
     }
     

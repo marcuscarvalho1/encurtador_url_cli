@@ -33,8 +33,16 @@ export class EncurtadorService {
     return this.httpClient1.get<Url>(this.apiUrl + "/url_encurtada/" + requestPath);
   }
   
+  public consultaUrlReal(url1: Url): Observable<Url>{
+    return this.httpClient1.post<Url>(this.apiUrl + "/url_real", url1, this.httpOptions);
+  }
+  
   public insereUrlEncurtada(url1: Url): Observable<Url>{
-      return this.httpClient1.post<Url>(this.apiUrl + "/encurtar", url1);
+      return this.httpClient1.post<Url>(this.apiUrl + "/encurtar", url1, this.httpOptions);
+  }
+  
+  public alteraUrl(url1: Url): Observable<Url>{
+      return this.httpClient1.put<Url>(this.apiUrl + "/encurtar", url1, this.httpOptions);
   }
 
 }

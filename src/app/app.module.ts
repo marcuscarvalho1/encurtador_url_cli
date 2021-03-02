@@ -15,6 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { UrlListComponent } from './views/home/url-list/url-list.component';
 import { MatTableModule } from '@angular/material/table';
 import { RedirectComponent } from './views/redirect/redirect.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { RedirectComponent } from './views/redirect/redirect.component';
     MatTabsModule,
     MatCardModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
