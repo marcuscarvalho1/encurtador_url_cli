@@ -1,0 +1,24 @@
+.nf-container {
+    align-items: center;
+    padding: 32px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+.l-flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 100px;
+    top: 50px;
+}
+
+.2-flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 100px;
+    top: 200px;
+}

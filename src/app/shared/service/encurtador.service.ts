@@ -1,26 +1,40 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ResponsePageable } from '../model/responsePageable';
+import { Url } from '../model/url.module';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EncurtadorService {
     
-    apiUrl = 'http://localhos:8080/api';
-    
+    apiUrl = 'http://localhost:8080/api';
+    linha: string = "";
+
     httpOptions = {
         headers: new HttpHeaders({
             'Content-Type': 'application/json'
         })
-    };
+    };         
 
   constructor(
-    private httpClient: HttpClient
+    private httpClient1: HttpClient
   ) { }
   
-  public getUrlsNaoExpirados(): Observable<ResponsePageable>{
-      return this.httpClient.get<ResponsePageable>(this.apiUrl + "/nao_expiradas");
+  public getUrlsNaoExpiradas(): Observable<Url[]>{      
+    return this.httpClient1.get<Url[]>(this.apiUrl + "/nao_expiradas");
   }
+  
+  public getUrls(): Observable<Url[]>{
+    return this.httpClient1.get<Url[]>(this.apiUrl + "/urls");
+  }
+  
+  public consultaUrlEncurtada(requestPath: string): Observable<Url>{
+    return this.httpClient1.get<Url>(this.apiUrl + "/url_encurtada/" + requestPath);
+  }
+  
+  public insereUrlEncurtada(url1: Url): Observable<Url>{
+      return this.httpClient1.post<Url>(this.apiUrl + "/encurtar", url1);
+  }
+
 }

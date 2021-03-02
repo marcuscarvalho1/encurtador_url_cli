@@ -1,0 +1,23 @@
+<table mat-table [dataSource]="urlsNaoExpiradas" class="mat-elevation-z8">
+
+  <!-- Coluna da URL ENCURTADA -->
+  <ng-container matColumnDef="urlEncurtada">
+    <th mat-header-cell *matHeaderCellDef>URL encurtada</th>
+    <td mat-cell *matCellDef="let element"> {{contextPath}}/{{element.urlEncurtada}} </td>
+  </ng-container>
+
+  <!-- Coluna da URL REAL -->
+  <ng-container matColumnDef="urlReal">
+    <th mat-header-cell *matHeaderCellDef>URL real</th>
+    <td mat-cell *matCellDef="let element"> {{element.urlReal}} </td>
+  </ng-container>
+
+  <!-- Coluna da DATA HORA DE EXPIRAÇÃO -->
+  <ng-container matColumnDef="dataHoraExpiracaoFormat">
+    <th mat-header-cell *matHeaderCellDef>Valida até</th>
+    <td mat-cell *matCellDef="let element"> {{element.dataHoraExpiracao | date: 'dd/MM/yyyy HH:mm:ss'}} </td>
+  </ng-container>  
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

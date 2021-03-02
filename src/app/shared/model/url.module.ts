@@ -1,7 +1,7 @@
 export class Url{
-    id: string = "";
-    urlEncurtada: string = "";
-    urlReal: string = "";
-    dataHoraCriacao: string = "";
-    dataHoraExpiracao = "";
+    id: string = '';
+    urlEncurtada: string = '';
+    urlReal: string = '';
+    dataHoraCriacao: string = '';
+    dataHoraExpiracao: string = '';
 }

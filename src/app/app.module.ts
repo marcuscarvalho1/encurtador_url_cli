@@ -12,11 +12,16 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input';
+import { UrlListComponent } from './views/home/url-list/url-list.component';
+import { MatTableModule } from '@angular/material/table';
+import { RedirectComponent } from './views/redirect/redirect.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    UrlListComponent,
+    RedirectComponent,    
   ],
   imports: [
     HttpClientModule,
@@ -28,7 +33,8 @@ import { MatInputModule } from '@angular/material/input';
     MatButtonModule,
     MatTabsModule,
     MatCardModule,
-    MatInputModule    
+    MatInputModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
