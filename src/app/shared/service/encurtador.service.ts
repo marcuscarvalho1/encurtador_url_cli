@@ -9,7 +9,7 @@ import { Url } from '../model/url.module';
 export class EncurtadorService {
     
     //apiUrl = 'http://localhost:8080/api';
-    apiUrl = 'https://encurtador-url-api.herokuapp.com/api'
+    apiUrl = 'https://encurtador-url-api.herokuapp.com/api';
     linha: string = "";
 
     httpOptions = {
